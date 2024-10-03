@@ -1,0 +1,56 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1E1E1E;
+  border-bottom: 1px solid #ddd;
+  height: 80px;
+}
+
+.logo {
+  background-color: #1E1E1E; 
+  padding: 5px; 
+  border-radius: 10px;
+  
+}
+
+.logo img {
+  height: 32px;
+}
+
+@media screen and (min-width: 800px) {
+  .logo img {
+    height: 50px;
+  }
+}
+
+
+
+.login-button,
+.logout-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-button {
+  background-color: #da259a;
+}
+
+.login-button:hover {
+  background-color: #8e6e40;
+}
+
+.logout-button {
+  background-color: #f3f786;
+}
+
+.logout-button:hover {
+  background-color: #fff869;
+  transform: scale(1.05);
+}

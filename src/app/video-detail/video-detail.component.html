@@ -1,0 +1,32 @@
+<div *ngIf="video" class="video-player-container">
+  <div class="title-container">
+    <h2>{{ video.title }}</h2>
+    <p>{{ video.description }}</p>
+  </div>
+  
+  <div class="control-panel">
+    <label class="qualy" for="quality">Qualität:</label>
+    <select class="quality" id="quality" [(ngModel)]="selectedQuality" (change)="onQualityChange()">
+      <option value="480p">480p</option>
+      <option value="720p">720p</option>
+      <option value="1080p">1080p</option>
+    </select>
+    <button class="back-button" (click)="goBack()">
+      <img src="assets/img/back_arrow.svg" alt="Back" />
+    </button>
+  </div>
+
+  <div class="project-scene">
+    <div class="project-screen">
+      <div class="project-wrapper">
+        <img class="cinema" src="assets/img/wand.jpg" alt="Cinema Background"/>
+        <div class="video-wrapper">
+          <video controls>
+            <source [src]="getVideoUrl()" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
